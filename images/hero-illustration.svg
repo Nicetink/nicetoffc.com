@@ -1,0 +1,68 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Основа с градиентом -->
+    <defs>
+        <linearGradient id="gradientPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5d4fff" />
+            <stop offset="100%" stop-color="#4834eb" />
+        </linearGradient>
+        <linearGradient id="gradientSecondary" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff4dae" />
+            <stop offset="100%" stop-color="#e3348d" />
+        </linearGradient>
+        <linearGradient id="gradientAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4cdfff" />
+            <stop offset="100%" stop-color="#39b0e6" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Компьютер -->
+    <rect x="150" y="150" width="200" height="140" rx="10" fill="url(#gradientPrimary)" />
+    <rect x="160" y="160" width="180" height="110" rx="5" fill="#16161a" />
+    
+    <!-- Экран с кодом -->
+    <rect x="170" y="170" width="160" height="90" rx="2" fill="#1c1c22" />
+    
+    <!-- Код на экране -->
+    <rect x="180" y="180" width="60" height="5" rx="2" fill="#5d4fff" />
+    <rect x="180" y="190" width="40" height="5" rx="2" fill="#4cdfff" />
+    <rect x="190" y="200" width="70" height="5" rx="2" fill="#ff4dae" />
+    <rect x="200" y="210" width="50" height="5" rx="2" fill="#4cdfff" />
+    <rect x="180" y="220" width="80" height="5" rx="2" fill="#5d4fff" />
+    <rect x="190" y="230" width="30" height="5" rx="2" fill="#ff4dae" />
+    <rect x="180" y="240" width="55" height="5" rx="2" fill="#4cdfff" />
+    
+    <!-- Подставка компьютера -->
+    <path d="M220 290 L200 320 L300 320 L280 290 Z" fill="url(#gradientPrimary)" />
+    
+    <!-- Документы -->
+    <rect x="340" y="180" width="60" height="80" rx="5" fill="#f5f5f7" />
+    <rect x="350" y="190" width="40" height="5" rx="2" fill="#1c1c22" opacity="0.6" />
+    <rect x="350" y="200" width="30" height="5" rx="2" fill="#1c1c22" opacity="0.6" />
+    <rect x="350" y="220" width="35" height="5" rx="2" fill="#1c1c22" opacity="0.6" />
+    <rect x="350" y="230" width="25" height="5" rx="2" fill="#1c1c22" opacity="0.6" />
+    
+    <!-- Кофейная чашка -->
+    <ellipse cx="120" cy="220" rx="20" ry="10" fill="url(#gradientSecondary)" />
+    <path d="M100 220 L100 190 A20 20 0 0 1 120 170 A20 20 0 0 1 140 190 L140 220 Z" fill="url(#gradientSecondary)" />
+    <ellipse cx="120" cy="190" rx="20" ry="10" fill="#16161a" />
+    
+    <!-- Облака с кодом (представляя программы) -->
+    <ellipse cx="400" cy="100" rx="40" ry="25" fill="url(#gradientPrimary)" opacity="0.8" />
+    <ellipse cx="80" cy="120" rx="30" ry="20" fill="url(#gradientSecondary)" opacity="0.8" />
+    <ellipse cx="250" cy="80" rx="50" ry="30" fill="url(#gradientAccent)" opacity="0.8" />
+    
+    <!-- Маленькие кружки с иконками программ внутри облаков -->
+    <circle cx="400" cy="100" r="15" fill="#16161a" />
+    <circle cx="80" cy="120" r="10" fill="#16161a" />
+    <circle cx="250" cy="80" r="12" fill="#16161a" />
+    
+    <!-- Символы внутри кружков, представляющие разные программы -->
+    <text x="394" y="105" font-family="Arial" font-size="12" fill="white">&lt;/&gt;</text>
+    <text x="75" y="124" font-family="Arial" font-size="10" fill="white">{ }</text>
+    <text x="244" y="84" font-family="Arial" font-size="10" fill="white">DB</text>
+    
+    <!-- Линии, соединяющие облака с компьютером -->
+    <line x1="380" y1="120" x2="280" y2="170" stroke="url(#gradientPrimary)" stroke-width="2" />
+    <line x1="100" y1="135" x2="180" y2="170" stroke="url(#gradientSecondary)" stroke-width="2" />
+    <line x1="250" y1="110" x2="250" y2="150" stroke="url(#gradientAccent)" stroke-width="2" />
+</svg> 

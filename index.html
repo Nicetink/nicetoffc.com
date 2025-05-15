@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicet - Innovative Software</title>
+    <link rel="stylesheet" href="styles/modern.css">
+    <link rel="stylesheet" href="styles/cursor-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo logo-shifted">
+                <h1>Nicet</h1>
+                <div class="logo-accent"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" data-i18n="menu_home">Главная</a></li>
+                    <li><a href="#products" data-i18n="menu_products">Продукты</a></li>
+                    <li><a href="#full-archive" data-i18n="menu_full_archive">Полный архив</a></li>
+                    <li><a href="downloads/Nicet_All_Programs.zip" class="download-link" download><i class="fas fa-download"></i> <span data-i18n="menu_download_all">Скачать всё</span></a></li>
+                    <li><a href="archive.html" data-i18n="menu_archive">Архив</a></li>
+                    <li><a href="#news" data-i18n="menu_news">Новости</a></li>
+                    <li><a href="#features" data-i18n="menu_features">Возможности</a></li>
+                    <li><a href="#about" data-i18n="menu_about">О нас</a></li>
+                    <li><a href="#license" data-i18n="menu_license">Лицензия</a></li>
+                    <li><a href="https://github.com/Nicetink" target="_blank" data-i18n="menu_github">GitHub</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-container">
+                <button class="theme-toggle glow-effect" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="lang-toggle glow-effect" aria-label="Toggle language">
+                    <span class="lang-ru">RU</span>
+                    <span class="lang-en">EN</span>
+                </button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Уведомление о бета-тестировании -->
+    <div class="beta-notice glass-effect">
+        <div class="beta-content">
+            <div class="beta-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div class="beta-text">
+                <p data-i18n="beta_notice">The site is in beta testing. Technical issues and errors may occur. Thank you for your understanding!</p>
+            </div>
+            <button class="beta-close"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <section id="home" class="hero section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title gradient-text glow-text" data-i18n="hero_title">Создавайте цифровую магию</h1>
+                    <p class="hero-subtitle glass-effect" data-i18n="hero_subtitle">Инновационные инструменты для современных творцов цифрового мира</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary glow-effect" data-i18n="hero_button_explore">Изучить программы</a>
+                        <a href="https://4-key.itch.io/" target="_blank" class="btn btn-secondary glass-effect" data-i18n="hero_button_itch">Посетить itch.io</a>
+                        <a href="https://github.com/Nicetink" target="_blank" class="btn btn-outline glass-effect"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    
+                    <div class="idea-lamp-container glass-effect">
+                        <div class="idea-lamp">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="idea-text" data-i18n="idea_generator">Нажми, чтобы получить идею проекта</div>
+                        <div class="idea-popup glass-effect">
+                            <p id="random-idea" data-i18n="idea_placeholder">Ваша идея появится здесь</p>
+                            <button class="close-idea"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image expanded">
+                <div class="blob-animation">
+                    <div class="blob blob-1 glow-effect"></div>
+                    <div class="blob blob-2 glow-effect"></div>
+                    <div class="blob blob-3 glow-effect"></div>
+                    <div class="blob blob-4 glow-effect"></div>
+                    <div class="blob blob-5 glow-effect"></div>
+                    <div class="blob blob-6 glow-effect"></div>
+                    <img src="images/hero-illustration.svg" alt="Nicet Illustration" class="floating glow-effect">
+                </div>
+            </div>
+        </div>
+        <div class="particles-container"></div>
+    </section>
+
+    <section id="products" class="products-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text glow-text" data-i18n="products_title">Наши продукты</h2>
+                <p class="section-subtitle glass-effect" data-i18n="products_subtitle">Мощные инструменты для разработчиков и креаторов</p>
+            </div>
+            
+            <div class="tab-container">
+                <div class="tabs glass-effect">
+                    <button class="tab-button active glow-effect" data-tab="stypoPoly" data-i18n="tab_styloPoly">StyloPoly</button>
+                    <button class="tab-button glow-effect" data-tab="ctg" data-i18n="tab_ctg">CTG</button>
+                    <button class="tab-button glow-effect" data-tab="aetherScript" data-i18n="tab_aetherScript">AetherScript</button>
+                    <button class="tab-button glow-effect" data-tab="lazip" data-i18n="tab_lazip">Lazip</button>
+                    <button class="tab-button glow-effect" data-tab="serenade" data-i18n="tab_serenade">Serenade</button>
+                    <button class="tab-button glow-effect" data-tab="aligeSys" data-i18n="tab_aligeSys">Alige Sys</button>
+                    <button class="tab-button glow-effect" data-tab="effinitumX">Effinitum X</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="stypoPoly">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/styloPoly.png" alt="StyloPoly">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">StyloPoly Blender - Addon</h3>
+                                <p data-i18n="product_styloPoly_desc" class="glass-text">A powerful Blender addon that simplifies the creation of Low-Poly models.</p>
+                                <ul class="product-features">
+                                    <li data-i18n="product_styloPoly_feature1">Simple tools for Low-Poly modeling</li>
+                                    <li data-i18n="product_styloPoly_feature2">Automatic model optimization</li>
+                                    <li data-i18n="product_styloPoly_feature3">Built-in texture tools</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://4-key.itch.io/" class="btn btn-primary glow-effect" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                    <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="ctg">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/ctg.png" alt="CTG">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">CTG (Code Template Generator) C++ Edition</h3>
+                                <p data-i18n="product_ctg_desc" class="glass-text">Code template generator for C++ that accelerates project development.</p>
+                                <ul class="product-features">
+                                    <li data-i18n="product_ctg_feature1">Pre-configured templates for various project types</li>
+                                    <li data-i18n="product_ctg_feature2">Automatic project structure creation</li>
+                                    <li data-i18n="product_ctg_feature3">Integration with popular IDEs</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://4-key.itch.io/" class="btn btn-primary glow-effect" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                    <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="aetherScript">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/aetherScript.png" alt="AetherScript">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">AetherScript - A modern programming language</h3>
+                                <p data-i18n="product_aetherScript_desc" class="glass-text">A modern programming language with simple syntax and powerful capabilities.</p>
+                                <ul class="product-features">
+                                    <li data-i18n="product_aetherScript_feature1">Simple and intuitive syntax</li>
+                                    <li data-i18n="product_aetherScript_feature2">Built-in tools for parallel computing</li>
+                                    <li data-i18n="product_aetherScript_feature3">Advanced type system</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://4-key.itch.io/" class="btn btn-primary glow-effect" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                    <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="lazip">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/lazip.png" alt="Lazip">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">Lazip - Compress your zip</h3>
+                                <p data-i18n="product_lazip_desc" class="glass-text">An innovative file compressor that compresses even already compressed archives.</p>
+                                <ul class="product-features">
+                                    <li data-i18n="product_lazip_feature1">Additional compression of existing zip archives</li>
+                                    <li data-i18n="product_lazip_feature2">Advanced compression algorithms</li>
+                                    <li data-i18n="product_lazip_feature3">Simple and intuitive interface</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://4-key.itch.io/" class="btn btn-primary glow-effect" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                    <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="serenade">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/serenade.png" alt="Serenade">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">Serenade Music Player</h3>
+                                <p data-i18n="product_serenade_desc" class="glass-text">Simple and elegant music player for macOS with unique features.</p>
+                                <ul class="product-features">
+                                    <li data-i18n="product_serenade_feature1">Minimalist design and easy control</li>
+                                    <li data-i18n="product_serenade_feature2">Advanced sound processing functions</li>
+                                    <li data-i18n="product_serenade_feature3">Integration with cloud music services</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://4-key.itch.io/" class="btn btn-primary glow-effect" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                    <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="aligeSys">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/aligeSys.png" alt="Alige Sys">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">Alige Sys Extreme</h3>
+                                <p data-i18n="product_aligeSys_desc" class="glass-text">Advanced Windows optimizer that improves system performance.</p>
+                                <ul class="product-features">
+                                    <li data-i18n="product_aligeSys_feature1">Automatic optimization of system services</li>
+                                    <li data-i18n="product_aligeSys_feature2">System cleanup from unnecessary files</li>
+                                    <li data-i18n="product_aligeSys_feature3">Tools to improve game performance</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://4-key.itch.io/" class="btn btn-primary glow-effect" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                    <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="effinitumX">
+                        <div class="product-card glass-effect">
+                            <div class="product-image glow-effect">
+                                <img src="images/products/effinitumX.png" alt="Effinitum X">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="gradient-text glow-text">Effinitum X</h3>
+                                <p class="glass-text">Мощный инструмент оптимизации системы Windows, созданный с использованием WPF.</p>
+                                <ul class="product-features">
+                                    <li>Детальная информация о системе (CPU, память, диски)</li>
+                                    <li>Очистка системы от временных и ненужных файлов</li>
+                                    <li>Анализатор диска и менеджер процессов</li>
+                                </ul>
+                                <div class="product-actions">
+                                    <a href="https://github.com/Nicetink" class="btn btn-primary glow-effect" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                                    <a href="https://4-key.itch.io/" class="btn btn-outline" target="_blank">itch.io <i class="fab fa-itch-io"></i></a>
+                                </div>
+                                <div class="download-notice glass-effect">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="full-archive" class="full-archive-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text glow-text">Full Archive</h2>
+                <p class="section-subtitle glass-effect">Download all our programs in one archive</p>
+            </div>
+            
+            <div class="archive-content glass-effect">
+                <div class="archive-info">
+                    <h3 class="gradient-text glow-text">Download full archive</h3>
+                    <p>Download the full archive with all our programs including:</p>
+                    <div class="archive-lists">
+                        <div class="archive-list">
+                            <h4>Uptima Engine versions:</h4>
+                            <ul>
+                                <li>Uptima Engine 4</li>
+                                <li>Uptima Engine 3</li>
+                                <li>Uptima Engine 2</li>
+                                <li>Uptima Engine 1.2</li>
+                            </ul>
+                        </div>
+                        <div class="archive-list">
+                            <h4>PURE versions:</h4>
+                            <ul>
+                                <li>PURE 1 build 1390</li>
+                                <li>PURE 2.2.7 build 2080</li>
+                            </ul>
+                        </div>
+                        <div class="archive-list">
+                            <h4>PytelOS and PyDOS versions:</h4>
+                            <ul>
+                                <li>PytelOS 8 build 4075</li>
+                                <li>PyDOSOS 1001</li>
+                                <li>PyDOS 1108</li>
+                                <li>PyDOS 1208 Latest BETA</li>
+                            </ul>
+                        </div>
+                        <div class="archive-list">
+                            <h4>Other programs:</h4>
+                            <ul>
+                                <li>StyloPoly Blender Addon</li>
+                                <li>CTG (Code Template Generator)</li>
+                                <li>AetherScript</li>
+                                <li>Lazip</li>
+                                <li>Serenade Music Player</li>
+                                <li>Alige Sys Extreme</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="archive-download">
+                        <a href="https://github.com/Nicetink" class="btn btn-primary glow-effect" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://4-key.itch.io/" class="btn btn-outline" target="_blank">
+                            <i class="fab fa-itch-io"></i> itch.io
+                        </a>
+                    </div>
+                    <div class="download-notice glass-effect">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io.</p>
+                    </div>
+                </div>
+                
+                <div class="individual-download">
+                    <h4>External download links:</h4>
+                    <div class="individual-links">
+                        <a href="https://github.com/Nicetink" class="individual-link glass-effect" target="_blank">GitHub Repository <i class="fab fa-github"></i></a>
+                        <a href="https://4-key.itch.io/" class="individual-link glass-effect" target="_blank">itch.io Page <i class="fab fa-itch-io"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text glow-text" data-i18n="news_title">Software News</h2>
+                <p class="section-subtitle glass-effect" data-i18n="news_subtitle">Learn about the latest updates and new features</p>
+            </div>
+            
+            <div class="news-container">
+                <div class="news-filters glass-effect">
+                    <button class="news-filter active" data-filter="all">All News</button>
+                    <button class="news-filter" data-filter="updates">Updates</button>
+                    <button class="news-filter" data-filter="releases">New Releases</button>
+                    <button class="news-filter" data-filter="events">Events</button>
+                </div>
+                
+                <div class="news-grid">
+                    <div class="news-card glass-effect" data-category="releases">
+                        <div class="news-image glow-effect">
+                            <img src="images/news/effinitum-x.jpg" alt="Effinitum X">
+                            <div class="news-date">
+                                <span class="day">20</span>
+                                <span class="month">Mar</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">New Release</span>
+                            <h3 class="news-title">Effinitum X Announcement</h3>
+                            <p class="news-excerpt">New Windows optimization tool with system information, cleanup and performance improvements.</p>
+                            <a href="https://github.com/Nicetink/Effinitum-X" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-pagination glass-effect">
+                    <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text glow-text" data-i18n="features_title">Ключевые особенности</h2>
+                <p class="section-subtitle glass-effect" data-i18n="features_subtitle">Что делает наши продукты уникальными</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon glow-effect">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 data-i18n="feature_performance_title">Высокая производительность</h3>
+                    <p data-i18n="feature_performance_desc">Все наши продукты оптимизированы для максимальной производительности и минимального использования ресурсов.</p>
+                </div>
+                
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon glow-effect">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="feature_security_title">Безопасность</h3>
+                    <p data-i18n="feature_security_desc">Мы серьезно относимся к безопасности и защите данных, обеспечивая надежную работу всех наших приложений.</p>
+                </div>
+                
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon glow-effect">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-i18n="feature_code_title">Чистый код</h3>
+                    <p data-i18n="feature_code_desc">Наши инструменты позволяют писать более чистый, модульный и поддерживаемый код для ваших проектов.</p>
+                </div>
+                
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon glow-effect">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 data-i18n="feature_automation_title">Автоматизация</h3>
+                    <p data-i18n="feature_automation_desc">Автоматизируйте рутинные задачи и сосредоточьтесь на творческих аспектах вашей работы.</p>
+                </div>
+                
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon glow-effect">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 data-i18n="feature_customization_title">Настраиваемость</h3>
+                    <p data-i18n="feature_customization_desc">Гибкие настройки и широкие возможности кастомизации для адаптации под ваши потребности.</p>
+                </div>
+                
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon glow-effect">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="feature_community_title">Сообщество</h3>
+                    <p data-i18n="feature_community_desc">Присоединяйтесь к растущему сообществу разработчиков, использующих наши инструменты.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title gradient-text glow-text" data-i18n="about_title">About Us</h2>
+                    <p data-i18n="about_text1" class="glass-text">Nicet is a team of experienced developers and designers creating innovative software tools for developers, designers, and creative professionals.</p>
+                    <p data-i18n="about_text2" class="glass-text">Our mission is to simplify and automate workflows, allowing creative people to focus on creating amazing products without unnecessary technical complexities.</p>
+                    <div class="about-stats">
+                        <div class="stat glass-effect glow-effect">
+                            <span class="stat-number">4</span>
+                            <span class="stat-text" data-i18n="about_stat1">Years of experience</span>
+                        </div>
+                        <div class="stat glass-effect glow-effect">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-text" data-i18n="about_stat2">Satisfied users</span>
+                        </div>
+                        <div class="stat glass-effect glow-effect">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-text" data-i18n="about_stat3">Products in portfolio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="github-activity glass-effect">
+                        <h3 class="gradient-text">Recent GitHub Activity</h3>
+                        <div class="github-feed">
+                            <div class="github-commit">
+                                <i class="fab fa-github"></i>
+                                <div class="commit-info">
+                                    <p class="commit-message">Updated documentation for StyloPoly v2.5</p>
+                                    <span class="commit-date">2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="github-commit">
+                                <i class="fab fa-github"></i>
+                                <div class="commit-info">
+                                    <p class="commit-message">Fixed bugs in AetherScript compiler</p>
+                                    <span class="commit-date">5 days ago</span>
+                                </div>
+                            </div>
+                            <div class="github-commit">
+                                <i class="fab fa-github"></i>
+                                <div class="commit-info">
+                                    <p class="commit-message">Added new templates for CTG</p>
+                                    <span class="commit-date">a week ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Nicetink" class="btn btn-outline" target="_blank">Visit GitHub <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="blob-animation">
+                        <div class="blob blob-1 glow-effect"></div>
+                        <div class="blob blob-2 glow-effect"></div>
+                        <img src="images/about-illustration.svg" alt="О нас" class="floating glow-effect">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="license" class="license-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text glow-text" data-i18n="license_title">Лицензия</h2>
+                <p class="section-subtitle glass-effect" data-i18n="license_subtitle">Информация о лицензировании наших продуктов</p>
+            </div>
+            
+            <div class="license-content glass-effect">
+                <div class="license-tab-content">
+                    <div class="license-tab-pane active" id="mit-license">
+                        <h3 class="gradient-text">Лицензии</h3>
+                        <p><strong>Важно:</strong> <span data-i18n="license_info">Не все наши программы распространяются под лицензией MIT. Некоторые продукты могут иметь собственные лицензионные соглашения. Пожалуйста, ознакомьтесь с документацией к каждому конкретному продукту перед использованием.</span></p>
+                        <p>Большинство наших программ с открытым исходным кодом распространяются под лицензией <span data-i18n="license_mit">MIT</span>:</p>
+                        <div class="license-text glass-effect">
+                            <pre>
+MIT License
+
+Copyright (c) 2025 Nicet
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+                            </pre>
+                        </div>
+                        <div class="license-benefits">
+                            <h4>Преимущества лицензии MIT:</h4>
+                        <ul class="license-features">
+                                <li>Свободное использование в личных и коммерческих проектах</li>
+                                <li>Возможность модификации исходного кода</li>
+                                <li>Возможность распространения модифицированных версий</li>
+                                <li>Минимальные ограничения для пользователей</li>
+                        </ul>
+                        </div>
+                        <a href="https://github.com/Nicetink" class="btn btn-primary glow-effect">Посетить GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="license-faq glass-effect">
+                <h3 class="gradient-text">Часто задаваемые вопросы</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Могу ли я использовать ваши продукты в коммерческих проектах?</h4>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, лицензия MIT позволяет свободно использовать наши продукты в любых проектах, включая коммерческие.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Нужно ли указывать авторство при использовании ваших продуктов?</h4>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Согласно лицензии MIT, вы должны включать текст лицензии и уведомление об авторских правах в любые существенные части программного обеспечения.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Могу ли я модифицировать исходный код ваших программ?</h4>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, лицензия MIT позволяет свободно модифицировать исходный код и распространять модифицированные версии.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2 class="gradient-text glow-text">Nicet</h2>
+                    <p data-i18n="footer_slogan" class="glass-text">Innovative tools for creative people</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Nicetink" class="social-link glow-effect" aria-label="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link glow-effect" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link glow-effect" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link glow-effect" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://4-key.itch.io/" class="social-link glow-effect" aria-label="Itch.io" target="_blank">
+                            <i class="fab fa-itch-io"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links glass-effect">
+                    <div class="footer-links-column">
+                        <h3 data-i18n="footer_company">Company</h3>
+                        <ul>
+                            <li><a href="#about" data-i18n="footer_about">About</a></li>
+                            <li><a href="#" data-i18n="footer_team">Team</a></li>
+                            <li><a href="#" data-i18n="footer_careers">Careers</a></li>
+                            <li><a href="#" data-i18n="footer_news">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3 data-i18n="footer_products">Products</h3>
+                        <ul>
+                            <li><a href="#stypoPoly">StyloPoly</a></li>
+                            <li><a href="#ctg">CTG</a></li>
+                            <li><a href="#aetherScript">AetherScript</a></li>
+                            <li><a href="#lazip">Lazip</a></li>
+                            <li><a href="#full-archive" data-i18n="menu_full_archive">Full Archive</a></li>
+                            <li><a href="archive.html" data-i18n="menu_archive">Archive</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3 data-i18n="footer_support">Support</h3>
+                        <ul>
+                            <li><a href="#" data-i18n="footer_docs">Documentation</a></li>
+                            <li><a href="#" data-i18n="footer_faq">FAQ</a></li>
+                            <li><a href="mailto:info@nicet.com" data-i18n="footer_contact">Contact</a></li>
+                            <li><a href="#license" data-i18n="footer_license">License</a></li>
+                            <li><a href="#" data-i18n="footer_privacy">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom glass-effect">
+                <p class="copyright" data-i18n="footer_copyright">© 2025 Nicet. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer_terms">Terms of Use</a>
+                    <a href="#" data-i18n="footer_privacy_policy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer_sitemap">Sitemap</a>
+                </div>
+                <div class="site-version">
+                    <p>Website version: 1.2.3</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-consent" class="cookie-consent glass-effect">
+        <div class="cookie-content">
+            <div class="cookie-icon">
+                <i class="fas fa-cookie-bite"></i>
+            </div>
+            <div class="cookie-text">
+                <p data-i18n="cookie_consent_text">Мы используем cookie-файлы для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с использованием файлов cookie.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn btn-primary glow-effect" data-i18n="cookie_accept">Принять</button>
+                <button id="cookie-settings" class="btn btn-outline" data-i18n="cookie_settings">Настройки</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-settings-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <div class="modal-header">
+                <h3 data-i18n="cookie_settings_title">Настройки файлов cookie</h3>
+                <button id="close-cookie-settings" class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="cookie-option">
+                    <div class="cookie-switch">
+                        <input type="checkbox" id="necessary-cookies" checked disabled>
+                        <label for="necessary-cookies"></label>
+                    </div>
+                    <div class="cookie-option-text">
+                        <h4 data-i18n="cookie_necessary">Необходимые cookie</h4>
+                        <p data-i18n="cookie_necessary_desc">Эти файлы cookie необходимы для работы веб-сайта и не могут быть отключены.</p>
+                    </div>
+                </div>
+                <div class="cookie-option">
+                    <div class="cookie-switch">
+                        <input type="checkbox" id="analytics-cookies" checked>
+                        <label for="analytics-cookies"></label>
+                    </div>
+                    <div class="cookie-option-text">
+                        <h4 data-i18n="cookie_analytics">Аналитические cookie</h4>
+                        <p data-i18n="cookie_analytics_desc">Помогают нам понять, как посетители взаимодействуют с сайтом.</p>
+                    </div>
+                </div>
+                <div class="cookie-option">
+                    <div class="cookie-switch">
+                        <input type="checkbox" id="marketing-cookies" checked>
+                        <label for="marketing-cookies"></label>
+                    </div>
+                    <div class="cookie-option-text">
+                        <h4 data-i18n="cookie_marketing">Маркетинговые cookie</h4>
+                        <p data-i18n="cookie_marketing_desc">Используются для показа релевантной рекламы и отслеживания её эффективности.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-cookie-settings" class="btn btn-primary glow-effect" data-i18n="cookie_save">Сохранить настройки</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Игровая кнопка и AI ассистент рядом -->
+    <div class="game-button-container">
+        <button id="game-toggle" class="game-toggle glow-effect" aria-label="Play Game">
+            <i class="fas fa-gamepad"></i>
+        </button>
+    </div>
+
+    <!-- AI Ассистент -->
+    <div class="ai-assistant-container">
+        <button class="ai-toggle glow-effect">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="ai-chat-window glass-effect">
+            <div class="ai-chat-header">
+                <h3>NicetAI Ассистент</h3>
+                <button class="ai-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="ai-chat-messages">
+                <div class="ai-message assistant">
+                    <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                    <div class="ai-bubble">
+                        Привет! Я NicetAI, ваш цифровой ассистент. Чем я могу помочь вам сегодня?
+                    </div>
+                </div>
+            </div>
+            <div class="ai-chat-input">
+                <input type="text" placeholder="Введите ваш вопрос..." aria-label="Введите ваш вопрос">
+                <button class="ai-send glow-effect"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="ai-suggestions">
+                <button class="ai-suggestion-btn glass-effect">Как начать работу?</button>
+                <button class="ai-suggestion-btn glass-effect">Какие продукты предлагает Nicet?</button>
+                <button class="ai-suggestion-btn glass-effect">Контактная информация</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мини-игра "Кликер" -->
+    <div id="clicker-game" class="game-container glass-effect">
+        <div class="game-header">
+            <h3>Nicet Clicker</h3>
+            <div class="game-stats">
+                <span id="click-count">0</span> <i class="fas fa-hand-pointer"></i>
+            </div>
+            <button id="close-game" class="game-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="game-content">
+            <div class="clicker-target glow-effect" id="click-target">
+                <i class="fas fa-atom"></i>
+            </div>
+            <div class="clicker-progress">
+                <div class="level-info">
+                    <span>Уровень: <span id="level-display">1</span></span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="clicker-upgrades">
+                <button id="upgrade-speed" class="upgrade-button glass-effect">
+                    <i class="fas fa-bolt"></i> Скорость +1
+                    <span class="upgrade-cost">50 кликов</span>
+                </button>
+                <button id="upgrade-multiplier" class="upgrade-button glass-effect">
+                    <i class="fas fa-times"></i> Множитель x2
+                    <span class="upgrade-cost">100 кликов</span>
+                </button>
+                <button id="upgrade-auto" class="upgrade-button glass-effect">
+                    <i class="fas fa-clock"></i> Автоклик +1/сек
+                    <span class="upgrade-cost">200 кликов</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Уведомление о прямых скачиваниях -->
+    <div class="downloads-notice glass-effect">
+        <div class="notice-content">
+            <div class="notice-icon">
+                <i class="fas fa-download"></i>
+            </div>
+            <div class="notice-text">
+                <p>Attention! Direct downloads from the site are currently unavailable. Please use GitHub or itch.io links to download programs.</p>
+            </div>
+            <button class="notice-close"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/lamp.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <script src="js/license.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/game.js"></script>
+
+    <!-- Анимированный кубик с пасхалкой -->
+    <div class="animated-cube-container">
+        <div class="animated-cube" id="easter-egg-cube">
+            <div class="cube-face"><i class="fas fa-dice-one"></i></div>
+            <div class="cube-face"><i class="fas fa-dice-two"></i></div>
+            <div class="cube-face"><i class="fas fa-dice-three"></i></div>
+            <div class="cube-face"><i class="fas fa-dice-four"></i></div>
+            <div class="cube-face"><i class="fas fa-dice-five"></i></div>
+            <div class="cube-face"><i class="fas fa-dice-six"></i></div>
+        </div>
+    </div>
+
+    <!-- Скрипт для уведомления о бета-тестировании и пасхалки -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Управление уведомлением о бета-тестировании
+            const betaNotice = document.querySelector('.beta-notice');
+            const betaClose = document.querySelector('.beta-close');
+            
+            if (betaClose && betaNotice) {
+                betaClose.addEventListener('click', function() {
+                    betaNotice.style.animation = 'fadeInDown 0.5s ease reverse forwards';
+                    setTimeout(() => {
+                        betaNotice.style.display = 'none';
+                    }, 500);
+                    
+                    // Запоминаем, что пользователь закрыл уведомление
+                    localStorage.setItem('betaNoticeClosed', 'true');
+                });
+                
+                // Проверяем, закрывал ли пользователь уведомление ранее
+                if (localStorage.getItem('betaNoticeClosed') === 'true') {
+                    betaNotice.style.display = 'none';
+                }
+            }
+            
+            // Управление уведомлением о скачивании
+            const downloadsNotice = document.querySelector('.downloads-notice');
+            const downloadClose = document.querySelector('.notice-close');
+            
+            if (downloadClose && downloadsNotice) {
+                downloadClose.addEventListener('click', function() {
+                    downloadsNotice.style.animation = 'fadeInDown 0.5s ease reverse forwards';
+                    setTimeout(() => {
+                        downloadsNotice.style.display = 'none';
+                    }, 500);
+                    
+                    // Запоминаем, что пользователь закрыл уведомление
+                    localStorage.setItem('downloadsNoticeClosed', 'true');
+                });
+                
+                // Проверяем, закрывал ли пользователь уведомление ранее
+                if (localStorage.getItem('downloadsNoticeClosed') === 'true') {
+                    downloadsNotice.style.display = 'none';
+                }
+            }
+            
+            // Пасхалка с кубиком
+            const cube = document.getElementById('easter-egg-cube');
+            let clickCount = 0;
+            
+            if (cube) {
+                cube.addEventListener('click', function() {
+                    clickCount++;
+                    
+                    // Эффект клика
+                    this.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 100);
+                    
+                    // Активация пасхалки после 4 кликов
+                    if (clickCount === 4) {
+                        activateEasterEgg();
+                        clickCount = 0; // Сбрасываем счетчик
+                    }
+                });
+            }
+            
+            // Функция активации пасхалки
+            function activateEasterEgg() {
+                // Создаем модальное окно для пасхалки
+                const easterEggModal = document.createElement('div');
+                easterEggModal.className = 'modal active';
+                easterEggModal.innerHTML = `
+                    <div class="modal-content glass-effect" style="text-align: center; padding: 30px;">
+                        <div class="modal-header">
+                            <h3>🎉 Вы нашли пасхалку! 🎉</h3>
+                            <button class="modal-close"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Поздравляем! Вы обнаружили секретную пасхалку.</p>
+                            <p>Используйте код <strong>NICET2025</strong> для получения дополнительной скидки 25% на все наши продукты!</p>
+                            <img src="images/easter-egg.gif" alt="Easter Egg" style="max-width: 100%; margin: 20px 0;">
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(easterEggModal);
+                
+                // Обработчик для закрытия пасхалки
+                const closeBtn = easterEggModal.querySelector('.modal-close');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function() {
+                        easterEggModal.classList.remove('active');
+                        setTimeout(() => {
+                            easterEggModal.remove();
+                        }, 300);
+                    });
+                }
+                
+                // Также закрываем по клику вне содержимого
+                easterEggModal.addEventListener('click', function(e) {
+                    if (e.target === easterEggModal) {
+                        easterEggModal.classList.remove('active');
+                        setTimeout(() => {
+                            easterEggModal.remove();
+                        }, 300);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

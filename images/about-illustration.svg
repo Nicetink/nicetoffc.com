@@ -1,0 +1,75 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Градиенты -->
+    <defs>
+        <linearGradient id="gradientPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5d4fff" />
+            <stop offset="100%" stop-color="#4834eb" />
+        </linearGradient>
+        <linearGradient id="gradientSecondary" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff4dae" />
+            <stop offset="100%" stop-color="#e3348d" />
+        </linearGradient>
+        <linearGradient id="gradientAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4cdfff" />
+            <stop offset="100%" stop-color="#39b0e6" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Центральный круг - команда -->
+    <circle cx="250" cy="200" r="80" fill="#16161a" stroke="url(#gradientPrimary)" stroke-width="3" />
+    
+    <!-- Люди внутри круга (абстрактные силуэты) -->
+    <circle cx="220" cy="180" r="15" fill="url(#gradientPrimary)" />
+    <rect x="212" y="200" width="16" height="30" rx="8" fill="url(#gradientPrimary)" />
+    
+    <circle cx="260" cy="170" r="18" fill="url(#gradientSecondary)" />
+    <rect x="250" y="195" width="20" height="35" rx="10" fill="url(#gradientSecondary)" />
+    
+    <circle cx="290" cy="185" r="13" fill="url(#gradientAccent)" />
+    <rect x="284" y="203" width="12" height="25" rx="6" fill="url(#gradientAccent)" />
+    
+    <!-- Орбитальные кольца с иконками инструментов -->
+    <ellipse cx="250" cy="200" rx="120" ry="120" fill="none" stroke="#26262e" stroke-width="1" stroke-dasharray="4 4" />
+    <ellipse cx="250" cy="200" rx="160" ry="160" fill="none" stroke="#26262e" stroke-width="1" stroke-dasharray="4 4" />
+    
+    <!-- Инструменты/продукты на орбитальных кольцах -->
+    <!-- Первая орбита -->
+    <circle cx="250" cy="80" r="20" fill="url(#gradientPrimary)" />
+    <text x="242" y="85" font-family="Arial" font-size="14" fill="white">S</text>
+    
+    <circle cx="370" cy="200" r="20" fill="url(#gradientSecondary)" />
+    <text x="362" y="205" font-family="Arial" font-size="14" fill="white">C</text>
+    
+    <circle cx="250" cy="320" r="20" fill="url(#gradientAccent)" />
+    <text x="242" y="325" font-family="Arial" font-size="14" fill="white">A</text>
+    
+    <circle cx="130" cy="200" r="20" fill="url(#gradientPrimary)" />
+    <text x="122" y="205" font-family="Arial" font-size="14" fill="white">L</text>
+    
+    <!-- Вторая орбита -->
+    <circle cx="110" cy="110" r="15" fill="url(#gradientSecondary)" />
+    <text x="105" y="115" font-family="Arial" font-size="10" fill="white">N</text>
+    
+    <circle cx="390" cy="110" r="15" fill="url(#gradientAccent)" />
+    <text x="385" y="115" font-family="Arial" font-size="10" fill="white">P</text>
+    
+    <circle cx="390" cy="290" r="15" fill="url(#gradientPrimary)" />
+    <text x="385" y="295" font-family="Arial" font-size="10" fill="white">F</text>
+    
+    <circle cx="110" cy="290" r="15" fill="url(#gradientSecondary)" />
+    <text x="105" y="295" font-family="Arial" font-size="10" fill="white">S</text>
+    
+    <!-- Соединительные линии -->
+    <line x1="235" y1="95" x2="230" y2="170" stroke="#5d4fff" stroke-width="1" />
+    <line x1="350" y1="195" x2="275" y2="185" stroke="#ff4dae" stroke-width="1" />
+    <line x1="245" y1="300" x2="240" y2="210" stroke="#4cdfff" stroke-width="1" />
+    <line x1="150" y1="198" x2="210" y2="180" stroke="#5d4fff" stroke-width="1" />
+    
+    <!-- Декоративные элементы -->
+    <circle cx="300" cy="70" r="5" fill="#5d4fff" opacity="0.5" />
+    <circle cx="400" cy="150" r="3" fill="#ff4dae" opacity="0.5" />
+    <circle cx="370" cy="350" r="6" fill="#4cdfff" opacity="0.5" />
+    <circle cx="150" cy="330" r="4" fill="#5d4fff" opacity="0.5" />
+    <circle cx="70" cy="200" r="7" fill="#ff4dae" opacity="0.5" />
+    <circle cx="420" cy="240" r="5" fill="#4cdfff" opacity="0.5" />
+</svg> 
